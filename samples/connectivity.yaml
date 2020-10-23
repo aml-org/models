@@ -1,0 +1,58 @@
+#% REST connecitivty model 1.0
+# REST Connectivity model sample
+name: Inventory API Connectivity
+description: Connectivity descriptor for Inventory API
+tenantId: f1e97bc6-315a-4490-82a7-23abe036327
+groupId: 9980b85-d338-3e3f-2fb4-5eb7d0066a4
+assetId: inventory-api
+version: 1.0.0
+
+apiSpec:
+  tenantId: 
+  groupId: 9980b85-315a-4490-82a7-23abe036327 
+  assetId: inverntory-api
+  version: 2.3.2 
+
+operations:
+  - id: "get:inventory"
+    restOperation: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/operation/get"
+    defaultName: Retrieve Inventory
+    params:
+      - name: page
+        defaultName: Page Number
+        restParam: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/operation/get/query-params/page"
+    output:
+      - restResponse: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/operation/get/response/200/content"
+    pagination: inventoryPagination
+
+  - id: "get:inventory/{sku}"
+    restOperation: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/{sku}/operation/get"
+    defaultName: Retrieve Inventory
+    params:
+      - name: sku
+        defaultName: SKU
+        restParam: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/{sku}/operation/get/uri-params/sku"
+      - name: page
+        defaultName: Page Number
+        restParam: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/operation/get/query-params/page"    
+    output:
+      - restResponse: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/{sku}/operation/get/response/200/content"
+    pagination: inventoryPagination  
+        
+testConnection:
+  operation:
+    designlink: "inventory/get"
+  params:
+    - name: sku
+    - value: 0
+  responseValidation:
+    validationExpression:
+      content: "#[output.statusCode == 200]" 
+      
+paginations:
+  inventoryPagination:
+    type: pageNumber
+    parameters:
+      pageNumberParamName: page
+      initialPageNumber: 1
+      pagingResponseExpression: "#[output.items]"

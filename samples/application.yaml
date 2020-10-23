@@ -1,0 +1,22 @@
+#% Application model 0.1
+# Application model instance sample 
+
+name: Order process service
+description: Process API that manages customers orders.
+tenantId: 9980b85-d338-3e3f-2fb4-5eb7d0066a4
+groupId: f1e97bc6-315a-4490-82a7-23abe036327
+assetId: order-process-service
+version: 1.1.3
+
+dependsOn:
+ - /assets/9980b85-d338-3e3f-2fb4-5eb7d0066a4/f1e97bc6-315a-44990-82a7-23abe036327/orders-api/1/0/0
+ - /assets/9980b85-d338-3e3f-2fb4-5eb7d0066a4/f1e97bc6-315a-44990-82a7-23abe036327/inventory-api/2/3/2
+
+services:
+ - id: "CreateOrderFlow"
+   service:
+     inboundEndpoint:
+        operation: "/apiSpecs/mythical/ordersapi/endpoints/orders/operation/post"
+     outboundEndpoints:
+       - operation: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/{sku}/operation/get"
+       - operation: "/apiSpecs/mythical/inverntoryapi/endpoints/inventory/{sku}/operation/post"
