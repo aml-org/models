@@ -1,0 +1,60 @@
+#%Vocabulary 1.0
+vocabulary: Lexical
+usage: "Lexical concepts"
+base: "http://a.ml/vocabularies/lexical#"
+
+classTerms:
+  Position:
+    displayName: "Position"
+    description: "Position in a document expressed as one-based line and one-based column offset"
+    properties:
+      - line
+      - column
+
+  Range:
+    displayName: "Range"
+    description: "A range in a document expressed as (one-based) start and end positions"
+    properties:
+      - start
+      - end
+
+  Location:
+    displayName: "Location"
+    description: "Represents a location inside a resource, such as a line inside a text file"
+    properties:
+      - uri
+      - range
+
+propertyTerms:
+
+  start:
+    displayName: "Start"
+    description: "Start Position of a Range"
+    range: Position
+
+  end:
+    displayName: "End"
+    description: "End Position of a Range"
+    range: Position
+
+  line:
+    displayName: "Line"
+    description: "Line number of a Position (one-based)"
+    range: integer
+
+  column:
+    displayName: "Column"
+    description: "Column number of a Position (one-based)"
+    range: integer
+
+  uri:
+    displayName: "URI"
+    description: "URI of a document of a Location"
+    range: uri
+
+  range:
+    displayName: "Range"
+    description: "Range of a Location"
+    range: Range
+
+
