@@ -1,0 +1,99 @@
+#%Dialect 1.0
+
+dialect: Validation Report
+version: 1.0
+usage: Validation Report
+
+external:
+  shacl: "http://www.w3.org/ns/shacl#"
+  validation: "http://a.ml/vocabularies/validation#"
+
+uses:
+  lexical: lexical.yaml
+
+nodeMappings:
+
+  ReportNode:
+    classTerm: shacl.ValidationReport
+    mapping:
+      conforms:
+        propertyTerm: shacl.conforms
+        mandatory: true
+        range: boolean
+      result:
+        propertyTerm: shacl.result
+        range: ValidationResultNode
+        mandatory: false
+        allowMultiple: true
+
+
+  ValidationResultNode:
+    classTerm: shacl.ValidationResult
+    mapping:
+      trace:
+        propertyTerm: validation.trace
+        range: TraceMessageNode
+        allowMultiple: true
+      focusNode:
+        propertyTerm: shacl.focusNode
+        range: uri
+      resultMessage:
+        propertyTerm: shacl.resultMessage
+        mandatory: true
+        range: string
+      resultSeverity:
+        propertyTerm: shacl.resultSeverity
+        range: uri
+      sourceShape: # we do not have the source shape ID in the OPA validator since we consume YAML profiles
+        propertyTerm: shacl.sourceShape
+        range: uri
+        mandatory: false
+      sourceShapeName: # replacement for source shape
+        propertyTerm: validation.sourceShapeName
+        range: string
+        mandatory: true
+
+  TraceMessageNode:
+    classTerm: validation.TraceMessage
+    mapping:
+      component:
+        propertyTerm: validation.component
+        mandatory: true
+        range: string
+      resultPath:
+        propertyTerm: shacl.resultPath
+        mandatory: true
+        range: string
+      traceValue:
+        propertyTerm: shacl.traceValue
+        mandatory: true
+        range: TraceValueNode
+      location:
+        mandatory: false
+        propertyTerm: validation.location
+        range: lexical.LocationNode
+
+  TraceValueNode: # should be a union? (depending on the possible combinations of properties)
+    classTerm: validation.TraceValue
+    mapping:
+      actual:
+        propertyTerm: validation.actual
+        range: any
+      condition:
+        propertyTerm: validation.condition
+        range: string
+      expected:
+        propertyTerm: validation.expected
+        range: any
+      negated:
+        propertyTerm: validation.negated
+        range: boolean
+      argument:
+        propertyTerm: validation.argument
+        range: string
+
+documents:
+  root:
+    encodes: ReportNode
+  options:
+    selfEncoded: true
