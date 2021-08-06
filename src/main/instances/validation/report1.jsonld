@@ -1,0 +1,35 @@
+{
+  "@graph": [
+    {
+      "@id": "",
+      "@type": [
+        "meta:DialectInstance",
+        "doc:Document",
+        "doc:Fragment",
+        "doc:Module",
+        "doc:Unit",
+        "sh:ValidationReport",
+        "file://src/main/dialects/validation-report.yaml#/declarations/ReportNode",
+        "meta:DialectDomainElement",
+        "doc:DomainElement"
+      ],
+      "sh:conforms": true,
+      "meta:definedBy": [
+        {
+          "@id": "file://src/main/dialects/validation-report.yaml"
+        }
+      ],
+      "doc:encodes": {
+        "@id": ""
+      },
+      "doc:version": "3.1.0",
+      "doc:root": true
+    }
+  ],
+  "@context": {
+    "@base": "file://src/main/instances/validation/report1.yaml",
+    "doc": "http://a.ml/vocabularies/document#",
+    "meta": "http://a.ml/vocabularies/meta#",
+    "sh": "http://www.w3.org/ns/shacl#"
+  }
+}
