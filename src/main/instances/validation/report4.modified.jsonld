@@ -35,6 +35,7 @@
       "location": {
         "@id": "http://a.ml/vocabularies/validation#location"
       },
+      "meta": "http://a.ml/vocabularies/meta#",
       "negated": {
         "@id": "http://a.ml/vocabularies/validation#negated"
       },
@@ -74,7 +75,14 @@
       },
       "validation": "http://a.ml/vocabularies/validation#"
     },
-    "@type": "shacl:ValidationReport",
+    "@type": [
+      "shacl:ValidationReport",
+      "meta:DialectInstance",
+      "doc:Document",
+      "doc:Fragment",
+      "doc:Module",
+      "doc:Unit"
+    ],
     "conforms": false,
     "result": [
       {
