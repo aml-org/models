@@ -75,6 +75,7 @@
       },
       "validation": "http://a.ml/vocabularies/validation#"
     },
+    "@id": "http://some-id.org",
     "@type": [
       "shacl:ValidationReport",
       "meta:DialectInstance",
