@@ -18,6 +18,8 @@ class ValidationReportTest extends BaseTest {
 
   test("Report 3 should conform") { reportShouldConform(s"$reports/report3.yaml") }
 
+  test("Report 4 should conform") { reportShouldConform(s"$reports/report4.modified.jsonld") }
+
   test("Report 1 should match golden") {
     renderedProfileShouldMatchGolden(s"$reports/report1.yaml", s"$reports/report1.jsonld")
   }
