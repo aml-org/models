@@ -30,6 +30,7 @@
         "@id": "http://www.w3.org/ns/shacl#focusNode"
       },
       "lexical": "http://a.ml/vocabularies/lexical#",
+      "lexicalDialect": "file://src/main/dialects/lexical.yaml#/",
       "line": {
         "@id": "http://a.ml/vocabularies/lexical#line"
       },
@@ -95,7 +96,8 @@
         {
           "@id": "http://some-id.org/result/0",
           "@type": [
-            "shacl:ValidationResult"
+            "shacl:ValidationResult",
+            "file://src/main/dialects/validation-report.yaml#/declarations/ValidationResultNode"
           ],
           "focusNode": {
             "@id": "file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint1/get"
@@ -109,23 +111,27 @@
             {
               "@id": "http://some-id.org/result/0/trace/0",
               "@type": [
-                "validation:TraceMessage"
+                "validation:Trace",
+                "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
               ],
               "component": "nested",
               "location": {
                 "@id": "http://some-id.org/result/0/trace/0/location",
                 "@type": [
-                  "lexical:Location"
+                  "lexical:Location",
+                  "lexicalDialect:declarations/LocationNode"
                 ],
                 "range": {
                   "@id": "http://some-id.org/result/0/trace/0/location/range",
                   "@type": [
-                    "lexical:Range"
+                    "lexical:Range",
+                    "lexicalDialect:declarations/RangeNode"
                   ],
                   "end": {
                     "@id": "http://some-id.org/result/0/trace/0/location/range/end",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 0,
                     "line": 17
@@ -133,7 +139,8 @@
                   "start": {
                     "@id": "http://some-id.org/result/0/trace/0/location/range/start",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 2,
                     "line": 13
@@ -151,7 +158,8 @@
                   {
                     "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0",
                     "@type": [
-                      "shacl:ValidationResult"
+                      "shacl:ValidationResult",
+                      "file://src/main/dialects/validation-report.yaml#/declarations/ValidationResultNode"
                     ],
                     "focusNode": {
                       "@id": "file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint1/get/201"
@@ -162,23 +170,27 @@
                       {
                         "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0",
                         "@type": [
-                          "validation:TraceMessage"
+                          "validation:Trace",
+                          "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
                         ],
                         "component": "pattern",
                         "location": {
                           "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location",
                           "@type": [
-                            "lexical:Location"
+                            "lexical:Location",
+                            "lexicalDialect:declarations/LocationNode"
                           ],
                           "range": {
                             "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location/range",
                             "@type": [
-                              "lexical:Range"
+                              "lexical:Range",
+                              "lexicalDialect:declarations/RangeNode"
                             ],
                             "end": {
                               "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location/range/end",
                               "@type": [
-                                "lexical:Position"
+                                "lexical:Position",
+                                "lexicalDialect:declarations/PositionNode"
                               ],
                               "column": 0,
                               "line": 17
@@ -186,7 +198,8 @@
                             "start": {
                               "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location/range/start",
                               "@type": [
-                                "lexical:Position"
+                                "lexical:Position",
+                                "lexicalDialect:declarations/PositionNode"
                               ],
                               "column": 6,
                               "line": 15
@@ -209,23 +222,27 @@
             {
               "@id": "http://some-id.org/result/0/trace/1",
               "@type": [
-                "validation:TraceMessage"
+                "validation:Trace",
+                "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
               ],
               "component": "in",
               "location": {
                 "@id": "http://some-id.org/result/0/trace/1/location",
                 "@type": [
-                  "lexical:Location"
+                  "lexical:Location",
+                  "lexicalDialect:declarations/LocationNode"
                 ],
                 "range": {
                   "@id": "http://some-id.org/result/0/trace/1/location/range",
                   "@type": [
-                    "lexical:Range"
+                    "lexical:Range",
+                    "lexicalDialect:declarations/RangeNode"
                   ],
                   "end": {
                     "@id": "http://some-id.org/result/0/trace/1/location/range/end",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 0,
                     "line": 17
@@ -233,7 +250,8 @@
                   "start": {
                     "@id": "http://some-id.org/result/0/trace/1/location/range/start",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 2,
                     "line": 13
@@ -254,7 +272,8 @@
         {
           "@id": "http://some-id.org/result/1",
           "@type": [
-            "shacl:ValidationResult"
+            "shacl:ValidationResult",
+            "file://src/main/dialects/validation-report.yaml#/declarations/ValidationResultNode"
           ],
           "focusNode": {
             "@id": "file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint2/get"
@@ -268,23 +287,27 @@
             {
               "@id": "http://some-id.org/result/1/trace/0",
               "@type": [
-                "validation:TraceMessage"
+                "validation:Trace",
+                "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
               ],
               "component": "nested",
               "location": {
                 "@id": "http://some-id.org/result/1/trace/0/location",
                 "@type": [
-                  "lexical:Location"
+                  "lexical:Location",
+                  "lexicalDialect:declarations/LocationNode"
                 ],
                 "range": {
                   "@id": "http://some-id.org/result/1/trace/0/location/range",
                   "@type": [
-                    "lexical:Range"
+                    "lexical:Range",
+                    "lexicalDialect:declarations/RangeNode"
                   ],
                   "end": {
                     "@id": "http://some-id.org/result/1/trace/0/location/end",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 10,
                     "line": 20
@@ -292,7 +315,8 @@
                   "start": {
                     "@id": "http://some-id.org/result/1/trace/0/location/start",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 2,
                     "line": 18
@@ -310,7 +334,8 @@
                   {
                     "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0",
                     "@type": [
-                      "shacl:ValidationResult"
+                      "shacl:ValidationResult",
+                      "file://src/main/dialects/validation-report.yaml#/declarations/ValidationResultNode"
                     ],
                     "focusNode": {
                       "@id": "file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint2/get/200"
@@ -321,23 +346,27 @@
                       {
                         "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0",
                         "@type": [
-                          "validation:TraceMessage"
+                          "validation:Trace",
+                          "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
                         ],
                         "component": "pattern",
                         "location": {
                           "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location",
                           "@type": [
-                            "lexical:Location"
+                            "lexical:Location",
+                            "lexicalDialect:declarations/LocationNode"
                           ],
                           "range": {
                             "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location/range",
                             "@type": [
-                              "lexical:Range"
+                              "lexical:Range",
+                              "lexicalDialect:declarations/RangeNode"
                             ],
                             "end": {
                               "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location/range/end",
                               "@type": [
-                                "lexical:Position"
+                                "lexical:Position",
+                                "lexicalDialect:declarations/PositionNode"
                               ],
                               "column": 10,
                               "line": 20
@@ -345,7 +374,8 @@
                             "start": {
                               "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location/range/start",
                               "@type": [
-                                "lexical:Position"
+                                "lexical:Position",
+                                "lexicalDialect:declarations/PositionNode"
                               ],
                               "column": 6,
                               "line": 20
@@ -368,23 +398,27 @@
             {
               "@id": "http://some-id.org/result/1/trace/1",
               "@type": [
-                "validation:TraceMessage"
+                "validation:Trace",
+                "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
               ],
               "component": "in",
               "location": {
                 "@id": "http://some-id.org/result/1/trace/1/location",
                 "@type": [
-                  "lexical:Location"
+                  "lexical:Location",
+                  "lexicalDialect:declarations/LocationNode"
                 ],
                 "range": {
                   "@id": "http://some-id.org/result/1/trace/1/location/range",
                   "@type": [
-                    "lexical:Range"
+                    "lexical:Range",
+                    "lexicalDialect:declarations/RangeNode"
                   ],
                   "end": {
                     "@id": "http://some-id.org/result/1/trace/1/location/range/end",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 10,
                     "line": 20
@@ -392,7 +426,8 @@
                   "start": {
                     "@id": "http://some-id.org/result/1/trace/1/location/range/start",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 2,
                     "line": 18
@@ -413,7 +448,8 @@
         {
           "@id": "http://some-id.org/result/2",
           "@type": [
-            "shacl:ValidationResult"
+            "shacl:ValidationResult",
+            "file://src/main/dialects/validation-report.yaml#/declarations/ValidationResultNode"
           ],
           "focusNode": {
             "@id": "file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint1/get"
@@ -427,23 +463,27 @@
             {
               "@id": "http://some-id.org/result/2/trace/0",
               "@type": [
-                "validation:TraceMessage"
+                "validation:Trace",
+                "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
               ],
               "component": "nested",
               "location": {
                 "@id": "http://some-id.org/result/2/trace/0/location",
                 "@type": [
-                  "lexical:Location"
+                  "lexical:Location",
+                  "lexicalDialect:declarations/LocationNode"
                 ],
                 "range": {
                   "@id": "http://some-id.org/result/2/trace/0/location/range",
                   "@type": [
-                    "lexical:Range"
+                    "lexical:Range",
+                    "lexicalDialect:declarations/RangeNode"
                   ],
                   "end": {
                     "@id": "http://some-id.org/result/2/trace/0/location/range/end",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 0,
                     "line": 17
@@ -451,7 +491,8 @@
                   "start": {
                     "@id": "http://some-id.org/result/2/trace/0/location/range/start",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 2,
                     "line": 13
@@ -471,23 +512,27 @@
             {
               "@id": "http://some-id.org/result/2/trace/1",
               "@type": [
-                "validation:TraceMessage"
+                "validation:Trace",
+                "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode"
               ],
               "component": "in",
               "location": {
                 "@id": "http://some-id.org/result/2/trace/1/location",
                 "@type": [
-                  "lexical:Location"
+                  "lexical:Location",
+                  "lexicalDialect:declarations/LocationNode"
                 ],
                 "range": {
                   "@id": "http://some-id.org/result/2/trace/1/location/range",
                   "@type": [
-                    "lexical:Range"
+                    "lexical:Range",
+                    "lexicalDialect:declarations/RangeNode"
                   ],
                   "end": {
                     "@id": "http://some-id.org/result/2/trace/1/location/range/end",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 0,
                     "line": 17
@@ -495,7 +540,8 @@
                   "start": {
                     "@id": "http://some-id.org/result/2/trace/1/location/range/start",
                     "@type": [
-                      "lexical:Position"
+                      "lexical:Position",
+                      "lexicalDialect:declarations/PositionNode"
                     ],
                     "column": 2,
                     "line": 13
