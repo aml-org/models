@@ -85,6 +85,11 @@
       "doc:Module",
       "doc:Unit"
     ],
+    "meta:definedBy": [
+      {
+        "@id": "file://src/main/dialects/validation-report.yaml"
+      }
+    ],
     "doc:encodes": {
       "@id": "http://some-id.org",
       "@type": [

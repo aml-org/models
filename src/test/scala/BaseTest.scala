@@ -82,12 +82,13 @@ trait BaseTest extends AsyncFunSuite {
 
   def renderedDialectInstanceShouldMatchGolden(instanceUrl: String,
                                                goldenUrl: String,
-                                               dialectUrl: String): Future[Assertion] = {
+                                               dialectUrl: String,
+                                               mediaType: String = "application/ld+json"): Future[Assertion] = {
     for {
       config    <- baseConfig.withDialect(dialectUrl)
       client    <- Future.successful(config.baseUnitClient())
       parsing   <- client.parseDialectInstance(instanceUrl)
-      actual    <- temporaryFile(client.render(parsing.dialectInstance, "application/ld+json"))
+      actual    <- temporaryFile(client.render(parsing.dialectInstance, mediaType))
       expected  <- Future.successful(Fs.asyncFile(goldenUrl.stripProtocol))
       assertion <- checkDiff(actual, expected, Utf8)
     } yield {

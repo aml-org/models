@@ -1,0 +1,160 @@
+#%Validation Report 1.0
+result:
+  -
+    focusNode: file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint1/get
+    resultMessage: GET operations must have 2xx, 4xx and 5xx status codes but no 201
+    sourceShapeName: and-or-not-rule
+    resultSeverity: http://www.w3.org/ns/shacl#Violation
+    trace:
+      -
+        location:
+          range:
+            end:
+              column: 0
+              line: 17
+            start:
+              column: 2
+              line: 13
+          uri: ""
+        resultPath: apiContract.returns
+        component: nested
+        traceValue:
+          subResult:
+            -
+              focusNode: file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint1/get/201
+              resultMessage: error in nested nodes under apiContract.returns
+              sourceShapeName: nested
+              trace:
+                -
+                  location:
+                    range:
+                      end:
+                        column: 0
+                        line: 17
+                      start:
+                        column: 6
+                        line: 15
+                    uri: ""
+                  resultPath: apiContract.statusCode
+                  component: pattern
+                  traceValue:
+                    negated: false
+                    argument: "201"
+          negated: false
+          actual: "1"
+          expected: "0"
+      -
+        location:
+          range:
+            end:
+              column: 0
+              line: 17
+            start:
+              column: 2
+              line: 13
+          uri: ""
+        resultPath: apiContract.method
+        component: in
+        traceValue:
+          negated: true
+          actual: get
+          expected: "[\"get\"]"
+  -
+    focusNode: file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint2/get
+    resultMessage: GET operations must have 2xx, 4xx and 5xx status codes but no 201
+    sourceShapeName: and-or-not-rule
+    resultSeverity: http://www.w3.org/ns/shacl#Violation
+    trace:
+      -
+        location:
+          range:
+            end:
+              column: 10
+              line: 20
+            start:
+              column: 2
+              line: 18
+          uri: ""
+        resultPath: apiContract.returns
+        component: nested
+        traceValue:
+          subResult:
+            -
+              focusNode: file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint2/get/200
+              resultMessage: error in nested nodes under apiContract.returns
+              sourceShapeName: nested
+              trace:
+                -
+                  location:
+                    range:
+                      end:
+                        column: 10
+                        line: 20
+                      start:
+                        column: 6
+                        line: 20
+                    uri: ""
+                  resultPath: apiContract.statusCode
+                  component: pattern
+                  traceValue:
+                    negated: false
+                    argument: "200"
+          negated: false
+          actual: "1"
+          expected: "0"
+      -
+        location:
+          range:
+            end:
+              column: 10
+              line: 20
+            start:
+              column: 2
+              line: 18
+          uri: ""
+        resultPath: apiContract.method
+        component: in
+        traceValue:
+          negated: true
+          actual: get
+          expected: "[\"get\"]"
+  -
+    focusNode: file://test/data/integration/profile6/negative.data.raml#/web-api/end-points/%2Fendpoint1/get
+    resultMessage: GET operations must have 2xx, 4xx and 5xx status codes but no 201
+    sourceShapeName: and-or-not-rule
+    resultSeverity: http://www.w3.org/ns/shacl#Violation
+    trace:
+      -
+        location:
+          range:
+            end:
+              column: 0
+              line: 17
+            start:
+              column: 2
+              line: 13
+          uri: ""
+        resultPath: apiContract.returns
+        component: nested
+        traceValue:
+          subResult: []
+          negated: true
+          actual: "0"
+          expected: "0"
+      -
+        location:
+          range:
+            end:
+              column: 0
+              line: 17
+            start:
+              column: 2
+              line: 13
+          uri: ""
+        resultPath: apiContract.method
+        component: in
+        traceValue:
+          negated: true
+          actual: get
+          expected: "[\"get\"]"
+conforms: false

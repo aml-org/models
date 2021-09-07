@@ -6,8 +6,8 @@ class ValidationReportTest extends BaseTest {
     instanceShouldConform(reportUrl, validationReportDialectUrl)
   }
 
-  private def renderedProfileShouldMatchGolden(profileUrl: String, goldenUrl: String) = {
-    renderedDialectInstanceShouldMatchGolden(profileUrl, goldenUrl, validationReportDialectUrl)
+  private def renderedProfileShouldMatchGolden(profileUrl: String, goldenUrl: String, mediaType: String = "application/ld+json") = {
+    renderedDialectInstanceShouldMatchGolden(profileUrl, goldenUrl, validationReportDialectUrl, mediaType)
   }
 
   test("Validation report dialect should conform") { dialectShouldConform(validationReportDialectUrl) }
@@ -30,6 +30,10 @@ class ValidationReportTest extends BaseTest {
 
   test("Report 3 should match golden") {
     renderedProfileShouldMatchGolden(s"$reports/report3.yaml", s"$reports/report3.jsonld")
+  }
+
+  test("Report 4 should match golden") {
+    renderedProfileShouldMatchGolden(s"$reports/report4.modified.jsonld", s"$reports/report4.yaml", "application/yaml")
   }
 
 
