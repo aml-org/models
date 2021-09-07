@@ -151,6 +151,10 @@
               "resultPath": "apiContract.returns",
               "traceValue": {
                 "@id": "http://some-id.org/result/0/trace/0/traceValue",
+                "@type": [
+                  "validation:TraceValue",
+                  "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                ],
                 "actual": 1,
                 "expected": 0,
                 "negated": false,
@@ -210,6 +214,10 @@
                         "resultPath": "apiContract.statusCode",
                         "traceValue": {
                           "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/traceValue",
+                          "@type": [
+                            "validation:TraceValue",
+                            "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                          ],
                           "argument": "201",
                           "negated": false
                         }
@@ -262,6 +270,10 @@
               "resultPath": "apiContract.method",
               "traceValue": {
                 "@id": "http://some-id.org/result/0/trace/1/traceValue",
+                "@type": [
+                  "validation:TraceValue",
+                  "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                ],
                 "actual": "get",
                 "expected": "[\"get\"]",
                 "negated": true
@@ -327,6 +339,10 @@
               "resultPath": "apiContract.returns",
               "traceValue": {
                 "@id": "http://some-id.org/result/1/trace/0/traceValue",
+                "@type": [
+                  "validation:TraceValue",
+                  "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                ],
                 "actual": 1,
                 "expected": 0,
                 "negated": false,
@@ -386,6 +402,10 @@
                         "resultPath": "apiContract.statusCode",
                         "traceValue": {
                           "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/traceValue",
+                          "@type": [
+                            "validation:TraceValue",
+                            "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                          ],
                           "argument": "200",
                           "negated": false
                         }
@@ -438,6 +458,10 @@
               "resultPath": "apiContract.method",
               "traceValue": {
                 "@id": "http://some-id.org/result/1/trace/1/traceValue",
+                "@type": [
+                  "validation:TraceValue",
+                  "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                ],
                 "actual": "get",
                 "expected": "[\"get\"]",
                 "negated": true
@@ -503,6 +527,10 @@
               "resultPath": "apiContract.returns",
               "traceValue": {
                 "@id": "http://some-id.org/result/2/trace/0/traceValue",
+                "@type": [
+                  "validation:TraceValue",
+                  "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                ],
                 "actual": 0,
                 "expected": 0,
                 "negated": true,
@@ -552,6 +580,10 @@
               "resultPath": "apiContract.method",
               "traceValue": {
                 "@id": "http://some-id.org/result/2/trace/1/traceValue",
+                "@type": [
+                  "validation:TraceValue",
+                  "file://src/main/dialects/validation-report.yaml#/declarations/TraceValueNode"
+                ],
                 "actual": "get",
                 "expected": "[\"get\"]",
                 "negated": true
