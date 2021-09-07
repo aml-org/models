@@ -93,6 +93,7 @@
       "conforms": false,
       "result": [
         {
+          "@id": "http://some-id.org/result/0",
           "@type": [
             "shacl:ValidationResult"
           ],
@@ -106,19 +107,23 @@
           "sourceShapeName": "and-or-not-rule",
           "trace": [
             {
+              "@id": "http://some-id.org/result/0/trace/0",
               "@type": [
                 "validation:TraceMessage"
               ],
               "component": "nested",
               "location": {
+                "@id": "http://some-id.org/result/0/trace/0/location",
                 "@type": [
                   "lexical:Location"
                 ],
                 "range": {
+                  "@id": "http://some-id.org/result/0/trace/0/location/range",
                   "@type": [
                     "lexical:Range"
                   ],
                   "end": {
+                    "@id": "http://some-id.org/result/0/trace/0/location/range/end",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -126,6 +131,7 @@
                     "line": 17
                   },
                   "start": {
+                    "@id": "http://some-id.org/result/0/trace/0/location/range/start",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -137,11 +143,13 @@
               },
               "resultPath": "apiContract.returns",
               "traceValue": {
+                "@id": "http://some-id.org/result/0/trace/0/traceValue",
                 "actual": 1,
                 "expected": 0,
                 "negated": false,
                 "subResult": [
                   {
+                    "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0",
                     "@type": [
                       "shacl:ValidationResult"
                     ],
@@ -152,19 +160,23 @@
                     "sourceShapeName": "nested",
                     "trace": [
                       {
+                        "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0",
                         "@type": [
                           "validation:TraceMessage"
                         ],
                         "component": "pattern",
                         "location": {
+                          "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location",
                           "@type": [
                             "lexical:Location"
                           ],
                           "range": {
+                            "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location/range",
                             "@type": [
                               "lexical:Range"
                             ],
                             "end": {
+                              "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location/range/end",
                               "@type": [
                                 "lexical:Position"
                               ],
@@ -172,6 +184,7 @@
                               "line": 17
                             },
                             "start": {
+                              "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/location/range/start",
                               "@type": [
                                 "lexical:Position"
                               ],
@@ -183,6 +196,7 @@
                         },
                         "resultPath": "apiContract.statusCode",
                         "traceValue": {
+                          "@id": "http://some-id.org/result/0/trace/0/traceValue/subResult/0/trace/0/traceValue",
                           "argument": "201",
                           "negated": false
                         }
@@ -193,19 +207,23 @@
               }
             },
             {
+              "@id": "http://some-id.org/result/0/trace/1",
               "@type": [
                 "validation:TraceMessage"
               ],
               "component": "in",
               "location": {
+                "@id": "http://some-id.org/result/0/trace/1/location",
                 "@type": [
                   "lexical:Location"
                 ],
                 "range": {
+                  "@id": "http://some-id.org/result/0/trace/1/location/range",
                   "@type": [
                     "lexical:Range"
                   ],
                   "end": {
+                    "@id": "http://some-id.org/result/0/trace/1/location/range/end",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -213,6 +231,7 @@
                     "line": 17
                   },
                   "start": {
+                    "@id": "http://some-id.org/result/0/trace/1/location/range/start",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -224,6 +243,7 @@
               },
               "resultPath": "apiContract.method",
               "traceValue": {
+                "@id": "http://some-id.org/result/0/trace/1/traceValue",
                 "actual": "get",
                 "expected": "[\"get\"]",
                 "negated": true
@@ -232,6 +252,7 @@
           ]
         },
         {
+          "@id": "http://some-id.org/result/1",
           "@type": [
             "shacl:ValidationResult"
           ],
@@ -245,19 +266,23 @@
           "sourceShapeName": "and-or-not-rule",
           "trace": [
             {
+              "@id": "http://some-id.org/result/1/trace/0",
               "@type": [
                 "validation:TraceMessage"
               ],
               "component": "nested",
               "location": {
+                "@id": "http://some-id.org/result/1/trace/0/location",
                 "@type": [
                   "lexical:Location"
                 ],
                 "range": {
+                  "@id": "http://some-id.org/result/1/trace/0/location/range",
                   "@type": [
                     "lexical:Range"
                   ],
                   "end": {
+                    "@id": "http://some-id.org/result/1/trace/0/location/end",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -265,6 +290,7 @@
                     "line": 20
                   },
                   "start": {
+                    "@id": "http://some-id.org/result/1/trace/0/location/start",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -276,11 +302,13 @@
               },
               "resultPath": "apiContract.returns",
               "traceValue": {
+                "@id": "http://some-id.org/result/1/trace/0/traceValue",
                 "actual": 1,
                 "expected": 0,
                 "negated": false,
                 "subResult": [
                   {
+                    "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0",
                     "@type": [
                       "shacl:ValidationResult"
                     ],
@@ -291,19 +319,23 @@
                     "sourceShapeName": "nested",
                     "trace": [
                       {
+                        "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0",
                         "@type": [
                           "validation:TraceMessage"
                         ],
                         "component": "pattern",
                         "location": {
+                          "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location",
                           "@type": [
                             "lexical:Location"
                           ],
                           "range": {
+                            "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location/range",
                             "@type": [
                               "lexical:Range"
                             ],
                             "end": {
+                              "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location/range/end",
                               "@type": [
                                 "lexical:Position"
                               ],
@@ -311,6 +343,7 @@
                               "line": 20
                             },
                             "start": {
+                              "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/location/range/start",
                               "@type": [
                                 "lexical:Position"
                               ],
@@ -322,6 +355,7 @@
                         },
                         "resultPath": "apiContract.statusCode",
                         "traceValue": {
+                          "@id": "http://some-id.org/result/1/trace/0/traceValue/subResult/0/trace/0/traceValue",
                           "argument": "200",
                           "negated": false
                         }
@@ -332,19 +366,23 @@
               }
             },
             {
+              "@id": "http://some-id.org/result/1/trace/1",
               "@type": [
                 "validation:TraceMessage"
               ],
               "component": "in",
               "location": {
+                "@id": "http://some-id.org/result/1/trace/1/location",
                 "@type": [
                   "lexical:Location"
                 ],
                 "range": {
+                  "@id": "http://some-id.org/result/1/trace/1/location/range",
                   "@type": [
                     "lexical:Range"
                   ],
                   "end": {
+                    "@id": "http://some-id.org/result/1/trace/1/location/range/end",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -352,6 +390,7 @@
                     "line": 20
                   },
                   "start": {
+                    "@id": "http://some-id.org/result/1/trace/1/location/range/start",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -363,6 +402,7 @@
               },
               "resultPath": "apiContract.method",
               "traceValue": {
+                "@id": "http://some-id.org/result/1/trace/1/traceValue",
                 "actual": "get",
                 "expected": "[\"get\"]",
                 "negated": true
@@ -371,6 +411,7 @@
           ]
         },
         {
+          "@id": "http://some-id.org/result/2",
           "@type": [
             "shacl:ValidationResult"
           ],
@@ -384,19 +425,23 @@
           "sourceShapeName": "and-or-not-rule",
           "trace": [
             {
+              "@id": "http://some-id.org/result/2/trace/0",
               "@type": [
                 "validation:TraceMessage"
               ],
               "component": "nested",
               "location": {
+                "@id": "http://some-id.org/result/2/trace/0/location",
                 "@type": [
                   "lexical:Location"
                 ],
                 "range": {
+                  "@id": "http://some-id.org/result/2/trace/0/location/range",
                   "@type": [
                     "lexical:Range"
                   ],
                   "end": {
+                    "@id": "http://some-id.org/result/2/trace/0/location/range/end",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -404,6 +449,7 @@
                     "line": 17
                   },
                   "start": {
+                    "@id": "http://some-id.org/result/2/trace/0/location/range/start",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -415,6 +461,7 @@
               },
               "resultPath": "apiContract.returns",
               "traceValue": {
+                "@id": "http://some-id.org/result/2/trace/0/traceValue",
                 "actual": 0,
                 "expected": 0,
                 "negated": true,
@@ -422,19 +469,23 @@
               }
             },
             {
+              "@id": "http://some-id.org/result/2/trace/1",
               "@type": [
                 "validation:TraceMessage"
               ],
               "component": "in",
               "location": {
+                "@id": "http://some-id.org/result/2/trace/1/location",
                 "@type": [
                   "lexical:Location"
                 ],
                 "range": {
+                  "@id": "http://some-id.org/result/2/trace/1/location/range",
                   "@type": [
                     "lexical:Range"
                   ],
                   "end": {
+                    "@id": "http://some-id.org/result/2/trace/1/location/range/end",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -442,6 +493,7 @@
                     "line": 17
                   },
                   "start": {
+                    "@id": "http://some-id.org/result/2/trace/1/location/range/start",
                     "@type": [
                       "lexical:Position"
                     ],
@@ -453,6 +505,7 @@
               },
               "resultPath": "apiContract.method",
               "traceValue": {
+                "@id": "http://some-id.org/result/2/trace/1/traceValue",
                 "actual": "get",
                 "expected": "[\"get\"]",
                 "negated": true
