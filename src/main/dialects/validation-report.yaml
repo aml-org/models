@@ -32,7 +32,7 @@ nodeMappings:
     mapping:
       trace:
         propertyTerm: validation.trace
-        range: TraceMessageNode
+        range: TraceNode
         allowMultiple: true
       focusNode:
         propertyTerm: shacl.focusNode
@@ -53,8 +53,8 @@ nodeMappings:
         range: string
         mandatory: true
 
-  TraceMessageNode:
-    classTerm: validation.TraceMessage
+  TraceNode:
+    classTerm: validation.Trace
     mapping:
       component:
         propertyTerm: validation.component
@@ -91,6 +91,10 @@ nodeMappings:
       argument:
         propertyTerm: validation.argument
         range: string
+      subResult:
+        propertyTerm: validation.subResult
+        range: ValidationResultNode
+        allowMultiple: true
 
 documents:
   root:

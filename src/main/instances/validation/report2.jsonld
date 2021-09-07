@@ -59,8 +59,8 @@
     {
       "@id": "#/result/0/trace/0",
       "@type": [
-        "validation:TraceMessage",
-        "file://src/main/dialects/validation-report.yaml#/declarations/TraceMessageNode",
+        "validation:Trace",
+        "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode",
         "meta:DialectDomainElement",
         "doc:DomainElement"
       ],
@@ -73,8 +73,8 @@
     {
       "@id": "#/result/1/trace/0",
       "@type": [
-        "validation:TraceMessage",
-        "file://src/main/dialects/validation-report.yaml#/declarations/TraceMessageNode",
+        "validation:Trace",
+        "file://src/main/dialects/validation-report.yaml#/declarations/TraceNode",
         "meta:DialectDomainElement",
         "doc:DomainElement"
       ],
