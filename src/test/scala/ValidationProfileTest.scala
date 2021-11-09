@@ -32,4 +32,6 @@ class ValidationProfileTest extends BaseTest {
 
   test("Validation profile13 should conform") { profileShouldConform(s"$profiles/profile13.yaml") }
 
+  test("Validation profile14 should conform") { profileShouldConform(s"$profiles/profile14.yaml") }
+
 }

@@ -93,7 +93,7 @@ nodeMappings:
         range: any
       nested:
         propertyTerm: shacl.node
-        range: shapeValidationNode
+        range: [ conditionalNode, shapeValidationNode, inlinedRegoNode, regoModuleNode, xoneShapeValidationNode, orShapeValidationNode, notShapeValidationNode, andShapeValidationNode ]
       atLeast:
         propertyTerm: shacl.atLeastNode
         range: qualifiedShapeValidationNode
