@@ -14,7 +14,7 @@ nodeMappings:
       column:
         propertyTerm: lexical.column
         mandatory: true
-        minimum: 1
+        minimum: 0
         range: integer
 
   RangeNode:

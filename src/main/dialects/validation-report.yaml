@@ -91,6 +91,19 @@ nodeMappings:
       argument:
         propertyTerm: validation.argument
         range: string
+      failedNodes:
+        propertyTerm: validation.failedNodes
+        range: integer
+      successfulNodes:
+        propertyTerm: validation.successfulNodes
+        range: integer
+      cardinality:
+        propertyTerm: validation.cardinality
+        range: integer
+      subResult:
+        propertyTerm: validation.subResult
+        range: ValidationResultNode
+        allowMultiple: true
 
 documents:
   root:
