@@ -51,7 +51,7 @@ nodeMappings:
         range: string
         allowMultiple: true
       name:
-        propertyTerm: shacl.codeFunctioName
+        propertyTerm: shacl.codeFunctionName
         range: string
   propertyConstraintNode:
     classTerm: shacl.PropertyShape
@@ -69,9 +69,19 @@ nodeMappings:
       maxCount:
         propertyTerm: shacl.maxCount
         range: integer
+        minimum: 0
       minCount:
         propertyTerm: shacl.minCount
         range: integer
+        minimum: 0
+      minLength:
+        propertyTerm: shacl.minLength
+        range: integer
+        minimum: 0
+      maxLength:
+        propertyTerm: shacl.maxLength
+        range: integer
+        minimum: 0
       minExclusive:
         propertyTerm: shacl.minExclusive
         range: number
