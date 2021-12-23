@@ -101,6 +101,9 @@ nodeMappings:
         propertyTerm: shacl.in
         allowMultiple: true
         range: any
+      hasValue: # this is a syntax sugar of atLeast with nested in: [ someValue ]
+        propertyTerm: shacl.hasValue
+        range: any
       nested:
         propertyTerm: shacl.node
         range: [ conditionalNode, shapeValidationNode, inlinedRegoNode, regoModuleNode, xoneShapeValidationNode, orShapeValidationNode, notShapeValidationNode, andShapeValidationNode ]
