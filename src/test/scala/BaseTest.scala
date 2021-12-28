@@ -87,7 +87,7 @@ trait BaseTest extends AsyncFunSuite {
       config    <- baseConfig.withDialect(dialectUrl)
       client    <- Future.successful(config.baseUnitClient())
       parsing   <- client.parseDialectInstance(instanceUrl)
-      actual    <- temporaryFile(client.render(parsing.dialectInstance))
+      actual    <- temporaryFile(client.render(parsing.dialectInstance, "application/ld+json"))
       expected  <- Future.successful(Fs.asyncFile(goldenUrl.stripProtocol))
       assertion <- checkDiff(actual, expected, Utf8)
     } yield {
