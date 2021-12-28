@@ -74,12 +74,20 @@ nodeMappings:
         propertyTerm: shacl.minCount
         range: integer
         minimum: 0
+      exactCount:
+        propertyTerm: validation.exactCount
+        range: integer
+        minimum: 0
       minLength:
         propertyTerm: shacl.minLength
         range: integer
         minimum: 0
       maxLength:
         propertyTerm: shacl.maxLength
+        range: integer
+        minimum: 0
+      exactLength:
+        propertyTerm: validation.exactLength
         range: integer
         minimum: 0
       minExclusive:
