@@ -51,7 +51,7 @@ nodeMappings:
         range: string
         allowMultiple: true
       name:
-        propertyTerm: shacl.codeFunctioName
+        propertyTerm: shacl.codeFunctionName
         range: string
   propertyConstraintNode:
     classTerm: shacl.PropertyShape
@@ -69,9 +69,27 @@ nodeMappings:
       maxCount:
         propertyTerm: shacl.maxCount
         range: integer
+        minimum: 0
       minCount:
         propertyTerm: shacl.minCount
         range: integer
+        minimum: 0
+      exactCount:
+        propertyTerm: validation.exactCount
+        range: integer
+        minimum: 0
+      minLength:
+        propertyTerm: shacl.minLength
+        range: integer
+        minimum: 0
+      maxLength:
+        propertyTerm: shacl.maxLength
+        range: integer
+        minimum: 0
+      exactLength:
+        propertyTerm: validation.exactLength
+        range: integer
+        minimum: 0
       minExclusive:
         propertyTerm: shacl.minExclusive
         range: number
@@ -90,6 +108,9 @@ nodeMappings:
       in:
         propertyTerm: shacl.in
         allowMultiple: true
+        range: any
+      hasValue: # this is a syntax sugar of atLeast with nested in: [ someValue ]
+        propertyTerm: shacl.hasValue
         range: any
       nested:
         propertyTerm: shacl.node
