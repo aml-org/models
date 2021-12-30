@@ -109,7 +109,14 @@ nodeMappings:
         propertyTerm: shacl.in
         allowMultiple: true
         range: any
-      hasValue: # this is a syntax sugar of atLeast with nested in: [ someValue ]
+      onlyValue: # syntax sugar for in: [ value ]
+        propertyTerm: validation.onlyValue
+        range: any
+      hasValues:
+        propertyTerm: validation.hasValues
+        allowMultiple: true
+        range: any
+      hasValue: # syntax sugar for hasValues: [ value ]
         propertyTerm: shacl.hasValue
         range: any
       nested:
