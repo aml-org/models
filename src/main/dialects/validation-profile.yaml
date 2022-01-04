@@ -29,6 +29,9 @@ nodeMappings:
         propertyTerm: validation.then
         range: [ conditionalNode, shapeValidationNode, inlinedRegoNode, regoModuleNode, xoneShapeValidationNode, orShapeValidationNode, notShapeValidationNode, andShapeValidationNode ]
         mandatory: true
+      else:
+        propertyTerm: validation.else
+        range: [ conditionalNode, shapeValidationNode, inlinedRegoNode, regoModuleNode, xoneShapeValidationNode, orShapeValidationNode, notShapeValidationNode, andShapeValidationNode ]
   inlinedRegoNode:
     classTerm: shacl.RegoConstraint
     mapping:
