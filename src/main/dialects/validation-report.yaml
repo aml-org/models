@@ -25,7 +25,9 @@ nodeMappings:
         range: ValidationResultNode
         mandatory: false
         allowMultiple: true
-
+      profileName:
+        propertyTerm: validation.profileName
+        range: string
 
   ValidationResultNode:
     classTerm: shacl.ValidationResult
