@@ -46,6 +46,10 @@ nodeMappings:
       resultSeverity:
         propertyTerm: shacl.resultSeverity
         range: uri
+      location: # defines location associated to focusNode, more specific locations can be found under trace
+        mandatory: false
+        propertyTerm: validation.location
+        range: lexical.LocationNode
       sourceShape: # we do not have the source shape ID in the OPA validator since we consume YAML profiles
         propertyTerm: shacl.sourceShape
         range: uri
